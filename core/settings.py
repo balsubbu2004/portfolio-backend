@@ -89,6 +89,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://portfolio-frontend-six-alpha.vercel.app",
+    "https://portfolio-frontend-b8gmu3q49-balsubbu2005.vercel.app",
 ]
 
 CLOUDINARY_STORAGE = {
@@ -110,6 +112,7 @@ CONTACT_EMAIL = config('CONTACT_EMAIL')
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-057db.up.railway.app',
+    'https://portfolio-frontend-six-alpha.vercel.app',
 ]
 
 LOGGING = {
