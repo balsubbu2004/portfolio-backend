@@ -106,3 +106,7 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = config('EMAIL_HOST_USER')
 CONTACT_EMAIL = config('CONTACT_EMAIL')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-057db.up.railway.app',
+]
