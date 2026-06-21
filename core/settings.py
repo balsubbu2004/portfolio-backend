@@ -111,3 +111,24 @@ CONTACT_EMAIL = config('CONTACT_EMAIL')
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-057db.up.railway.app',
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
