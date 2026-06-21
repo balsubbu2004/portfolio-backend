@@ -39,7 +39,7 @@ class HeroProfile(models.Model):
     tagline = models.TextField()
     years_experience = models.IntegerField(default=0)
     projects_completed = models.IntegerField(default=0)
-    hero_image = models.ImageField(upload_to='hero/', storage=MediaCloudinaryStorage())
+    hero_image = models.ImageField(upload_to='hero/', storage=MediaCloudinaryStorage(), blank=True, null=True)
     resume_url = models.URLField(blank=True)
     
     def __str__(self):
@@ -50,7 +50,7 @@ class AboutSection(models.Model):
     subtitle = models.CharField(max_length=200)
     heading = models.CharField(max_length=300)
     description = models.TextField()
-    about_image = models.ImageField(upload_to='about/', storage=MediaCloudinaryStorage())
+    about_image = models.ImageField(upload_to='about/', storage=MediaCloudinaryStorage(), blank=True, null=True)
 
     def __str__(self):
         return self.heading
@@ -59,7 +59,7 @@ class AboutSection(models.Model):
 class BlogPost(models.Model):
     title = models.CharField(max_length=300)
     tag = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='blog/', storage=MediaCloudinaryStorage())
+    image = models.ImageField(upload_to='blog/', storage=MediaCloudinaryStorage(), blank=True, null=True)
     link = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
